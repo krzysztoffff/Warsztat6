@@ -13,9 +13,26 @@
 </head>
 <body>
 	<%@include file="jspf/header.jspf"%>
-	
 	<%@include file="jspf/main_menu.jspf"%>
-	${msg}
+	
+	<form:form method='post' modelAttribute="user">
+		<p>
+			User name
+			<form:input path="username" /><form:errors path="username"/>
+		</p>
+		<p>
+			Email
+			<form:input path="email" /><form:errors path="email"/>
+		</p>
+		<p>
+			Password
+			<form:password path="password" /> <form:errors path="password"></form:errors>
+		</p>
+		<p>
+			<input type='submit' />
+		</p>
+	
+	</form:form>
 	<%@include file="jspf/footer.jspf"%>
 </body>
 </html>
