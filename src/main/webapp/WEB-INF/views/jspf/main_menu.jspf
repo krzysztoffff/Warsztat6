@@ -1,15 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <%@ page session="true"%>
 <p>
 
 
 	<c:choose>
-		<c:when test="${sessionScope.user==null}">
-			<a href='http://localhost:8080/Warsztat6/login'>Register</a>
+		<c:when test = "${sessionScope.user==null}">
+			<a href='http://localhost:8080/Warsztat6/register'>Register</a>
 			<br />
 			<a href='http://localhost:8080/Warsztat6/login'>Login</a>
 			<br />
@@ -23,6 +22,9 @@
 
 		</c:otherwise>
 	</c:choose>
+	
+	
+
 
 
 

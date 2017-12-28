@@ -58,6 +58,7 @@ public class UserController {
                 HttpSession s = SessionManager.session();
                 s.setAttribute("user", u);
                 ra.addFlashAttribute("msg", "Jestes zalogowany!");
+                ra.addFlashAttribute("krzak", "<br/>Twoje krzaki "+u.getPassword());
                 return "redirect:/";
             }
         m.addAttribute("msg", "Wprowadz poprawne dane");

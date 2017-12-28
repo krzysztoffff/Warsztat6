@@ -2,7 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,19 +13,17 @@
 <body>
 	<%@include file="jspf/header.jspf"%>
 	<%@include file="jspf/main_menu.jspf"%>
-	<p class = 'error'>${msg}</p>
-	<form:form method='post' modelAttribute="user">
-		<p>
-			User name
-			<form:input path="username" />
-		</p>
+	<p class = 'error'>${msg}</p> Login
+	
+	<form:form method='post' modelAttribute="loginData">
+		
 		<p>
 			Email
-			<form:input path="email" />
+			<form:input path="email" type="email"/>
 		</p>
 		<p>
 			Password
-			<form:password path="password" />
+			<form:password path="password"/>
 		</p>
 		<p>
 			<input type='submit' />
